@@ -52,3 +52,24 @@ class Transferencia extends Pago {
     }
   }
 }
+
+const pagoEfectivo = new Efectivo("500");
+pagoEfectivo.procesarPago("600");
+
+
+
+const pagoTarjeta = new Tarjeta("300");
+pagoTarjeta.procesarPago("1000"); 
+
+
+
+const pagoTarjetaDeclinada = new Tarjeta("800");
+pagoTarjetaDeclinada.procesarPago("200");  
+
+
+
+const pagoTransferenciaExitosa = new Transferencia("750", 750);   
+pagoTransferenciaExitosa.procesarPago()
+
+const pagoTransferenciaFallida = new Transferencia("750", 500);   
+pagoTransferenciaFallida.procesarPago()

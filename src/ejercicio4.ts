@@ -52,3 +52,4 @@ const empleadoPorHoras = new EmpleadoPorHoras('Stan', 6)
 empleadoPorHoras.calcularSalario() 
 const empleadoPorComision = new EmpleadoPorComision('Toño', 12000) 
 empleadoPorComision.calcularSalario() 
+

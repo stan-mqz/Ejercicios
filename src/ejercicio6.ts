@@ -6,7 +6,7 @@ abstract class Notificacion {
   class Email extends Notificacion {
     constructor(mensaje: string) {
       super(mensaje);
-      this.enviar();
+      
     }
     enviar(): void {
       console.log(`el mensaje: ${this.mensaje}, se envio correctamente por Email`);
@@ -16,7 +16,7 @@ abstract class Notificacion {
   class SMS extends Notificacion {
     constructor(mensaje: string) {
       super(mensaje);
-      this.enviar();
+      
     }
     enviar(): void {
       console.log(`el mensaje: ${this.mensaje}, se envio correctamente por SMS`);
@@ -26,7 +26,7 @@ abstract class Notificacion {
   class WhatsApp extends Notificacion {
     constructor(mensaje: string) {
       super(mensaje);
-      this.enviar();
+      
     }
     enviar(): void {
       console.log(`el mensaje: ${this.mensaje}, se envio correctamente por WhatsApp`);
@@ -34,5 +34,8 @@ abstract class Notificacion {
   }
   
   const email = new Email('Reunión mañana a las 9am');
+  email.enviar()
   const sms = new SMS('Tu código de verificación es 4821');
+  sms.enviar()
   const whats = new WhatsApp('Que ondas chelito');
+  whats.enviar()
